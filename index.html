@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Realm of [Your Name]</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">&#9876; REALM</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#belegarth">Belegarth</a></li>
+      <li><a href="#gaming">Gaming</a></li>
+      <li><a href="#hacking">Hacking</a></li>
+      <li><a href="#pugs">Pugs</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">&#9876; WARRIOR &middot; GAMER &middot; HACKER &middot; PUG ENJOYER &#9876;</div>
+      <h1 class="hero-title glitch" data-text="[YOUR NAME]">[YOUR NAME]</h1>
+      <p class="hero-sub typewriter" id="heroTyped"></p>
+      <div class="hero-cta">
+        <a href="#belegarth" class="btn btn-primary">Enter the Realm</a>
+        <a href="#hacking" class="btn btn-ghost">Access Terminal</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">About the Warrior</h2>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>A wanderer between realms &mdash; wielding foam blades on the battlefield, mastering digital dungeons, hunting vulnerabilities in the shadows, and resting with a snoring pug on the couch.</p>
+          <p>This site is my corner of the internet. Equal parts war journal, achievement log, research notes, and pug photo dump.</p>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat-card">
+            <span class="stat-num" data-target="47">0</span>
+            <span class="stat-label">Battles Fought</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="200">0</span>
+            <span class="stat-label">Hours Gamed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="12">0</span>
+            <span class="stat-label">CTFs Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="1">0</span>
+            <span class="stat-label">Perfect Pugs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BELEGARTH -->
+  <section id="belegarth" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#9876; Belegarth</h2>
+      <p class="section-sub fade-in">Medieval foam combat &mdash; where the hits are real and the glory is eternal.</p>
+
+      <div class="weapon-grid">
+        <div class="weapon-card fade-in" data-weapon="sword">
+          <div class="weapon-icon">&#9876;</div>
+          <h3>Single Sword</h3>
+          <p>The bread and butter. Fast, versatile, and great for close quarters. A staple of every fighter's arsenal.</p>
+          <div class="weapon-tags">
+            <span class="tag">Offense</span><span class="tag">Beginner Friendly</span>
+          </div>
+        </div>
+        <div class="weapon-card fade-in" data-weapon="shield">
+          <div class="weapon-icon">&#9633;</div>
+          <h3>Sword &amp; Shield</h3>
+          <p>Balanced and tactical. The shield opens up blocking lanes while keeping your sword hand free to punish openings.</p>
+          <div class="weapon-tags">
+            <span class="tag">Defense</span><span class="tag">Tactical</span>
+          </div>
+        </div>
+        <div class="weapon-card fade-in" data-weapon="spear">
+          <div class="weapon-icon">&#11835;</div>
+          <h3>Spear</h3>
+          <p>Reach is power. Keep enemies at bay with the spear's range. Devastating in line battles and against single fighters.</p>
+          <div class="weapon-tags">
+            <span class="tag">Range</span><span class="tag">Line Combat</span>
+          </div>
+        </div>
+        <div class="weapon-card fade-in" data-weapon="florentine">
+          <div class="weapon-icon">&#9876;&#9876;</div>
+          <h3>Florentine</h3>
+          <p>Two weapons, double the chaos. Requires coordination but rewards with relentless pressure from all angles.</p>
+          <div class="weapon-tags">
+            <span class="tag">Offense</span><span class="tag">Advanced</span>
+          </div>
+        </div>
+        <div class="weapon-card fade-in" data-weapon="great">
+          <div class="weapon-icon">&#9907;</div>
+          <h3>Great Weapon</h3>
+          <p>Big stick energy. Two-handed weapons like greatswords and polearms hit hard and control space like nothing else.</p>
+          <div class="weapon-tags">
+            <span class="tag">Power</span><span class="tag">Area Control</span>
+          </div>
+        </div>
+        <div class="weapon-card fade-in" data-weapon="archery">
+          <div class="weapon-icon">&#127993;</div>
+          <h3>Archery</h3>
+          <p>Strike from afar. Foam arrows and bows let you rain terror on the enemy before the lines even clash.</p>
+          <div class="weapon-tags">
+            <span class="tag">Ranged</span><span class="tag">Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="belegarth-rules fade-in">
+        <h3>&#9998; Core Rules Quickref</h3>
+        <ul class="rules-list">
+          <li><span class="rule-key">Limb hits</span> &mdash; Struck limb is "dead", leg hits drop you to a knee</li>
+          <li><span class="rule-key">Body/head hits</span> &mdash; You're dead, drop to the ground</li>
+          <li><span class="rule-key">Shields</span> &mdash; Block hits but cannot be used as weapons</li>
+          <li><span class="rule-key">Calling hits</span> &mdash; Honor system, call your own hits honestly</li>
+          <li><span class="rule-key">Garb</span> &mdash; Pre-17th century style clothing required at events</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMING -->
+  <section id="gaming" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#127918; Gaming</h2>
+      <p class="section-sub fade-in">Achievements unlocked in the digital realm.</p>
+
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in unlocked">
+          <div class="ach-icon">&#128081;</div>
+          <div class="ach-info">
+            <h4>First Blood</h4>
+            <p>Won your first PvP match</p>
+          </div>
+          <div class="ach-badge">&#9733;</div>
+        </div>
+        <div class="achievement-card fade-in unlocked">
+          <div class="ach-icon">&#128293;</div>
+          <div class="ach-info">
+            <h4>On Fire</h4>
+            <p>5 win streak in any game</p>
+          </div>
+          <div class="ach-badge">&#9733;</div>
+        </div>
+        <div class="achievement-card fade-in unlocked">
+          <div class="ach-icon">&#128065;</div>
+          <div class="ach-info">
+            <h4>All Nighter</h4>
+            <p>Played until sunrise</p>
+          </div>
+          <div class="ach-badge">&#9733;</div>
+        </div>
+        <div class="achievement-card fade-in unlocked">
+          <div class="ach-icon">&#128196;</div>
+          <div class="ach-info">
+            <h4>Lore Master</h4>
+            <p>Read every in-game journal entry</p>
+          </div>
+          <div class="ach-badge">&#9733;</div>
+        </div>
+        <div class="achievement-card fade-in locked">
+          <div class="ach-icon">&#128274;</div>
+          <div class="ach-info">
+            <h4>Speed Runner</h4>
+            <p>Complete any game under world record pace</p>
+          </div>
+          <div class="ach-badge">&#63;</div>
+        </div>
+        <div class="achievement-card fade-in locked">
+          <div class="ach-icon">&#128274;</div>
+          <div class="ach-info">
+            <h4>100% Complete</h4>
+            <p>Platinum any game</p>
+          </div>
+          <div class="ach-badge">&#63;</div>
+        </div>
+      </div>
+
+      <div class="current-playing fade-in">
+        <h3>&#9654; Currently Playing</h3>
+        <div class="game-list">
+          <div class="game-entry">
+            <div class="game-status active"></div>
+            <span class="game-name">Edit this in index.html</span>
+            <div class="game-bar"><div class="game-fill" style="width:72%"></div></div>
+            <span class="game-pct">72%</span>
+          </div>
+          <div class="game-entry">
+            <div class="game-status idle"></div>
+            <span class="game-name">Another game here</span>
+            <div class="game-bar"><div class="game-fill" style="width:45%"></div></div>
+            <span class="game-pct">45%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HACKING -->
+  <section id="hacking" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#9166; Ethical Hacking</h2>
+      <p class="section-sub fade-in">Breaking things legally since forever. All for defense.</p>
+
+      <div class="hacking-grid">
+        <div class="skill-cards fade-in">
+          <div class="skill-card">
+            <h4>&#128270; Reconnaissance</h4>
+            <p>OSINT, network scanning, enumeration. Know your target before you move.</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>&#128268; Web App Testing</h4>
+            <p>OWASP Top 10, XSS, SQLi, broken auth. Web is the biggest attack surface.</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>&#128421; CTF / Challenges</h4>
+            <p>Capture The Flag competitions. Forensics, crypto, pwn, reverse engineering.</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>&#128100; Social Engineering</h4>
+            <p>The human is always the weakest link. Awareness and defense training.</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+
+        <!-- FAKE TERMINAL -->
+        <div class="terminal-wrap fade-in">
+          <div class="terminal-bar">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">terminal &mdash; bash</span>
+          </div>
+          <div class="terminal-body" id="terminal">
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">whoami</span></div>
+            <div class="t-line t-out">ethical_hacker // belegarth_warrior // pug_enthusiast</div>
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">ls skills/</span></div>
+            <div class="t-line t-out">recon/&nbsp;&nbsp;web-app/&nbsp;&nbsp;ctf/&nbsp;&nbsp;social-eng/&nbsp;&nbsp;networking/</div>
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">cat certs.txt</span></div>
+            <div class="t-line t-out">[Edit your certs here in index.html]</div>
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">echo "All activities authorized &amp; ethical"</span></div>
+            <div class="t-line t-out">All activities authorized &amp; ethical</div>
+            <div class="t-line t-input">
+              <span class="t-prompt">visitor@realm:~$</span>
+              <input type="text" id="termInput" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUGS -->
+  <section id="pugs" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128021; Pugs</h2>
+      <p class="section-sub fade-in">The most important section on this entire site.</p>
+
+      <div class="pug-facts fade-in">
+        <div class="fact-card">
+          <div class="fact-icon">&#128021;</div>
+          <h4>Snore Machines</h4>
+          <p>Pugs are brachycephalic, meaning their flat faces cause them to snore loudly. It's a feature, not a bug.</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#129392;</div>
+          <h4>Professional Nappers</h4>
+          <p>Pugs sleep 14 hours a day on average. Honestly, the goal. Respect the hustle.</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#128293;</div>
+          <h4>Ancient Royalty</h4>
+          <p>Pugs were bred by Chinese emperors and later became favorites of European royalty. They know they're royalty.</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#129505;</div>
+          <h4>Group: A Grumble</h4>
+          <p>A group of pugs is called a "grumble." This is the best collective noun in the English language. Period.</p>
+        </div>
+      </div>
+
+      <div class="pug-meter fade-in">
+        <h3>Current Pug Mood Meter</h3>
+        <div class="mood-track">
+          <span>&#128532; Grumpy</span>
+          <div class="mood-bar">
+            <div class="mood-fill" id="moodFill"></div>
+            <div class="mood-thumb" id="moodThumb">&#128021;</div>
+          </div>
+          <span>Ecstatic &#129392;</span>
+        </div>
+        <p class="mood-label" id="moodLabel">Calculating pug happiness...</p>
+      </div>
+
+      <div class="pug-ascii fade-in">
+        <pre class="ascii-pug">
+  ／￣￣ヽ＿
+ ｜ ・  ・ |
+  ＼ ＿▽＿ /
+   ／ ＼ ／
+  ｜ pug ｜
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-motto">&#9876; Forged in foam, tempered in code, sustained by pugs &#128021;</p>
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">CTFtime</a>
+        <a href="https://belegarth.com" target="_blank" rel="noopener">Belegarth</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 [Your Name] &middot; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

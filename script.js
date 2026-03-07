@@ -4,21 +4,99 @@
 
 /* ---- NAVBAR scroll effect ---- */
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 /* ---- Mobile nav toggle ---- */
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks  = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
+
+/* ---- FIRST VISIT SPLASH ---- */
+(function initSplash() {
+  const splash = document.getElementById('splash');
+  if (!splash) return;
+  const SEEN_KEY = 'hw_splash_seen';
+  if (!localStorage.getItem(SEEN_KEY)) {
+    splash.classList.add('active');
+    localStorage.setItem(SEEN_KEY, '1');
+  }
+  const skip = document.getElementById('skipSplash');
+  if (skip) skip.addEventListener('click', () => splash.classList.remove('active'));
+  splash.addEventListener('click', e => {
+    if (e.target === splash) splash.classList.remove('active');
+  });
+  // Splash canvas particles
+  const sc = document.getElementById('splashCanvas');
+  if (sc) runParticleCanvas(sc);
+})();
+
+/* ---- SHARED PARTICLE CANVAS FUNCTION ---- */
+function runParticleCanvas(canvas) {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let particles = [], W, H;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth  || window.innerWidth;
+    H = canvas.height = canvas.offsetHeight || window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = ['#c9a84c', '#6a0dad', '#00ff88', '#9b30ff'];
+  function Particle() { this.reset(); }
+  Particle.prototype.reset = function() {
+    this.x = Math.random() * W; this.y = Math.random() * H;
+    this.r = Math.random() * 1.5 + .5;
+    this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
+    this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    this.alpha = Math.random() * .5 + .1;
+  };
+  Particle.prototype.update = function() {
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+  };
+  for (let i = 0; i < 120; i++) particles.push(new Particle());
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(201,168,76,${.06*(1-dist/100)})`;
+          ctx.lineWidth = .5;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    particles.forEach(p => {
+      p.update();
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = p.color; ctx.globalAlpha = p.alpha; ctx.fill(); ctx.globalAlpha = 1;
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
 
 /* ---- PARTICLE CANVAS (hero background) ---- */
 (function initParticles() {
   const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
   const ctx    = canvas.getContext('2d');
   let particles = [];
   let W, H;
@@ -94,7 +172,7 @@ navLinks.querySelectorAll('a').forEach(a => {
     'Belegarth warrior by day.',
     'Gamer by night.',
     'Ethical hacker always.',
-    'Pug dad forever.',
+    'Pug lover eternally.',
   ];
   let pIdx = 0, cIdx = 0, deleting = false;
 

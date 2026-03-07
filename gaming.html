@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming — HEXWARDEN</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body class="subpage">
+
+  <nav id="navbar">
+    <div class="nav-logo"><a href="index.html">&#9876; HEXWARDEN</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="belegarth.html">Belegarth</a></li>
+      <li><a href="gaming.html" class="active">Gaming</a></li>
+      <li><a href="hacking.html">Hacking</a></li>
+      <li><a href="pugs.html">Pugs</a></li>
+    </ul>
+    <button class="nav-toggle">&#9776;</button>
+  </nav>
+
+  <header class="page-hero gaming-hero">
+    <div class="ph-content">
+      <div class="ph-badge">&#127918; PLAYER ONE</div>
+      <h1 class="ph-title">Gaming</h1>
+      <p class="ph-sub">Achievements, obsessions, and an AI that finds your next favorite game</p>
+    </div>
+  </header>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#127942; Achievement Log</h2>
+      <p class="section-sub fade-in">The grind is documented.</p>
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#128081;</div><div class="ach-info"><h4>First Blood</h4><p>Won your first PvP match</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#128293;</div><div class="ach-info"><h4>On Fire</h4><p>5 win streak in any game</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#128065;</div><div class="ach-info"><h4>All Nighter</h4><p>Played until sunrise</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#128196;</div><div class="ach-info"><h4>Lore Master</h4><p>Read every in-game journal entry</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#128081;</div><div class="ach-info"><h4>Solo Carry</h4><p>Carried a team of 4 to victory alone</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in unlocked"><div class="ach-icon">&#127381;</div><div class="ach-info"><h4>Day One</h4><p>Played a game on launch day</p></div><div class="ach-badge">&#9733;</div></div>
+        <div class="achievement-card fade-in locked"><div class="ach-icon">&#128274;</div><div class="ach-info"><h4>Speed Runner</h4><p>Complete any game under world record pace</p></div><div class="ach-badge">?</div></div>
+        <div class="achievement-card fade-in locked"><div class="ach-icon">&#128274;</div><div class="ach-info"><h4>Platinum God</h4><p>100% complete any game</p></div><div class="ach-badge">?</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY PLAYING -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#9654; Currently Playing</h2>
+      <div class="current-playing fade-in">
+        <div class="game-list">
+          <div class="game-entry">
+            <div class="game-status active"></div>
+            <span class="game-name">Edit in gaming.html</span>
+            <div class="game-bar"><div class="game-fill" style="width:72%"></div></div>
+            <span class="game-pct">72%</span>
+          </div>
+          <div class="game-entry">
+            <div class="game-status idle"></div>
+            <span class="game-name">Another game</span>
+            <div class="game-bar"><div class="game-fill" style="width:45%"></div></div>
+            <span class="game-pct">45%</span>
+          </div>
+          <div class="game-entry">
+            <div class="game-status idle"></div>
+            <span class="game-name">On the backlog</span>
+            <div class="game-bar"><div class="game-fill" style="width:10%"></div></div>
+            <span class="game-pct">10%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAVORITES BY GENRE -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128081; Favorites by Genre</h2>
+      <div class="genre-grid fade-in">
+        <div class="genre-card"><h4>&#9876; Action / Combat</h4><p>Edit these in gaming.html</p></div>
+        <div class="genre-card"><h4>&#127758; Open World RPG</h4><p>Edit these in gaming.html</p></div>
+        <div class="genre-card"><h4>&#128268; Horror</h4><p>Edit these in gaming.html</p></div>
+        <div class="genre-card"><h4>&#9889; Roguelikes</h4><p>Edit these in gaming.html</p></div>
+        <div class="genre-card"><h4>&#128736; Strategy</h4><p>Edit these in gaming.html</p></div>
+        <div class="genre-card"><h4>&#127760; Multiplayer</h4><p>Edit these in gaming.html</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI GAME RECOMMENDER -->
+  <section class="section section-dark" id="ai-recommender">
+    <div class="container">
+      <h2 class="section-title fade-in">&#129302; AI Game Recommender</h2>
+      <p class="section-sub fade-in">Tell the bot your budget, platforms, preferred genres, and playstyle — get personalized game picks instantly.</p>
+
+      <!-- API KEY SETUP -->
+      <div class="ai-key-setup fade-in" id="aiKeySetup">
+        <div class="key-card">
+          <div class="key-icon">&#128273;</div>
+          <h3>Connect your Anthropic API Key</h3>
+          <p>The recommender uses Claude AI to give you personalized picks. Your key is stored only in your browser's localStorage — never sent anywhere except directly to Anthropic's API.</p>
+          <div class="key-input-row">
+            <input type="password" id="apiKeyInput" placeholder="sk-ant-..." />
+            <button class="btn btn-primary" id="saveKeyBtn">Save &amp; Start</button>
+          </div>
+          <p class="key-note">Don't have a key? Get one free at <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a></p>
+        </div>
+      </div>
+
+      <!-- CHAT INTERFACE -->
+      <div class="ai-chat-wrap fade-in" id="aiChatWrap" style="display:none">
+        <div class="chat-header">
+          <div class="chat-status-dot"></div>
+          <span>GameBot — Powered by Claude</span>
+          <button id="changeKeyBtn" class="btn-tiny">&#128274; Change Key</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-msg bot">
+            <div class="msg-avatar">&#129302;</div>
+            <div class="msg-bubble">
+              Hey! I'm GameBot. Tell me what you're looking for and I'll find your next obsession.<br><br>
+              To get the best recs, mention:
+              <ul>
+                <li>&#128176; <strong>Budget</strong> (free, under $15, $15–30, $30–60, $60+)</li>
+                <li>&#128421; <strong>Platform</strong> (PC, PS5, Xbox, Switch, Mobile)</li>
+                <li>&#127918; <strong>Genre</strong> (RPG, FPS, Horror, Strategy, etc.)</li>
+                <li>&#128100; <strong>Playstyle</strong> (casual, competitive, story-driven, sandbox)</li>
+              </ul>
+              Or just describe what you're in the mood for in plain English!
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" placeholder="e.g. cheap PC games with deep lore, solo player..." />
+          <button id="sendChatBtn" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-motto">&#9876; Forged in foam, tempered in code, sustained by pugs &#128021;</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 HEXWARDEN</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  /* ---- AI Game Recommender ---- */
+  const KEY_STORE = 'hw_anthropic_key';
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput    = document.getElementById('chatInput');
+  const sendBtn      = document.getElementById('sendChatBtn');
+  const keySetup     = document.getElementById('aiKeySetup');
+  const chatWrap     = document.getElementById('aiChatWrap');
+  const apiKeyInput  = document.getElementById('apiKeyInput');
+  const saveKeyBtn   = document.getElementById('saveKeyBtn');
+  const changeKeyBtn = document.getElementById('changeKeyBtn');
+
+  const SYSTEM_PROMPT = `You are GameBot, a knowledgeable and enthusiastic game recommender AI. Your job is to suggest the perfect games for the user based on their preferences.
+
+When making recommendations:
+- Give 3-5 specific game titles
+- For each game include: title, platforms, approximate current price, a 1-2 sentence description, and why it matches their stated preferences
+- Format each recommendation clearly with the game name as a header
+- Be enthusiastic but concise
+- If the user gives vague preferences, ask one clarifying question before recommending
+- Always mention if a game has a free trial, demo, or is on Game Pass/PS Plus
+- Use a fun, gamer-friendly tone`;
+
+  const conversationHistory = [];
+
+  function getKey() { return localStorage.getItem(KEY_STORE); }
+
+  function initChat() {
+    const key = getKey();
+    if (key) {
+      keySetup.style.display = 'none';
+      chatWrap.style.display = 'flex';
+    }
+  }
+
+  saveKeyBtn.addEventListener('click', () => {
+    const val = apiKeyInput.value.trim();
+    if (!val.startsWith('sk-ant-') && !val.startsWith('sk-')) {
+      apiKeyInput.style.borderColor = 'var(--red)';
+      return;
+    }
+    localStorage.setItem(KEY_STORE, val);
+    keySetup.style.display = 'none';
+    chatWrap.style.display = 'flex';
+  });
+
+  changeKeyBtn.addEventListener('click', () => {
+    localStorage.removeItem(KEY_STORE);
+    chatWrap.style.display = 'none';
+    keySetup.style.display = 'flex';
+    apiKeyInput.value = '';
+  });
+
+  function appendMessage(role, html) {
+    const wrap = document.createElement('div');
+    wrap.className = 'chat-msg ' + role;
+    wrap.innerHTML = `
+      <div class="msg-avatar">${role === 'bot' ? '&#129302;' : '&#128100;'}</div>
+      <div class="msg-bubble">${html}</div>`;
+    chatMessages.appendChild(wrap);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function appendTyping() {
+    const wrap = document.createElement('div');
+    wrap.className = 'chat-msg bot typing-indicator';
+    wrap.id = 'typingIndicator';
+    wrap.innerHTML = `<div class="msg-avatar">&#129302;</div><div class="msg-bubble"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>`;
+    chatMessages.appendChild(wrap);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return wrap;
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    chatInput.value = '';
+    sendBtn.disabled = true;
+
+    appendMessage('user', escapeHtml(text));
+    conversationHistory.push({ role: 'user', content: text });
+
+    const typing = appendTyping();
+
+    try {
+      const key = getKey();
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': key,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-allow-browser': 'true'
+        },
+        body: JSON.stringify({
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 1024,
+          system: SYSTEM_PROMPT,
+          messages: conversationHistory
+        })
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error?.message || `HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      const reply = data.content[0].text;
+      conversationHistory.push({ role: 'assistant', content: reply });
+
+      typing.remove();
+      appendMessage('bot', formatBotMessage(reply));
+    } catch (err) {
+      typing.remove();
+      appendMessage('bot', `&#9888; Error: ${escapeHtml(err.message)}. Check your API key or try again.`);
+    }
+
+    sendBtn.disabled = false;
+    chatInput.focus();
+  }
+
+  function formatBotMessage(text) {
+    // Convert markdown-ish formatting to HTML
+    return escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/^### (.+)$/gm, '<h4>$1</h4>')
+      .replace(/^## (.+)$/gm, '<h3>$1</h3>')
+      .replace(/^- (.+)$/gm, '<li>$1</li>')
+      .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+      .replace(/\n\n/g, '<br><br>')
+      .replace(/\n/g, '<br>');
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+  initChat();
+  </script>
+</body>
+</html>

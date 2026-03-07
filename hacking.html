@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethical Hacking — HEXWARDEN</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body class="subpage">
+
+  <nav id="navbar">
+    <div class="nav-logo"><a href="index.html">&#9876; HEXWARDEN</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="belegarth.html">Belegarth</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="hacking.html" class="active">Hacking</a></li>
+      <li><a href="pugs.html">Pugs</a></li>
+    </ul>
+    <button class="nav-toggle">&#9776;</button>
+  </nav>
+
+  <header class="page-hero hacking-hero">
+    <div class="ph-content">
+      <div class="ph-badge">&#9166; AUTHORIZED ACCESS ONLY</div>
+      <h1 class="ph-title">Ethical Hacking</h1>
+      <p class="ph-sub">Breaking things legally. All for defense. All authorized.</p>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128268; Skills &amp; Focus Areas</h2>
+      <div class="hacking-grid">
+        <div class="skill-cards fade-in">
+          <div class="skill-card"><h4>&#128270; Reconnaissance</h4><p>OSINT, network scanning, enumeration. Know the target before you move.</p><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+          <div class="skill-card"><h4>&#128268; Web App Testing</h4><p>OWASP Top 10, XSS, SQLi, broken auth. Web is the biggest attack surface.</p><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+          <div class="skill-card"><h4>&#128421; CTF / Challenges</h4><p>Capture The Flag competitions — forensics, crypto, pwn, reverse engineering.</p><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+          <div class="skill-card"><h4>&#128100; Social Engineering</h4><p>The human is always the weakest link. Awareness and defense training.</p><div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div></div>
+          <div class="skill-card"><h4>&#128736; Scripting &amp; Automation</h4><p>Python, Bash, custom tooling. Automate the boring stuff, own the interesting stuff.</p><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        </div>
+        <div class="terminal-wrap fade-in">
+          <div class="terminal-bar">
+            <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+            <span class="t-title">terminal &mdash; bash</span>
+          </div>
+          <div class="terminal-body" id="terminal">
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">whoami</span></div>
+            <div class="t-line t-out">hexwarden // ethical_hacker // belegarth_warrior</div>
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">ls tools/</span></div>
+            <div class="t-line t-out">hasher/ b64/ jwt-decoder/ ip-lookup/ dns/ password-check/ cipher/ regex/</div>
+            <div class="t-line"><span class="t-prompt">visitor@realm:~$</span> <span class="t-cmd">cat disclaimer.txt</span></div>
+            <div class="t-line t-out">All security activities are authorized and ethical.</div>
+            <div class="t-line t-out">Never test systems you do not own or have permission to test.</div>
+            <div class="t-line t-input">
+              <span class="t-prompt">visitor@realm:~$</span>
+              <input type="text" id="termInput" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING RESOURCES -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128218; Learning Resources</h2>
+      <div class="resource-grid fade-in">
+        <a href="https://tryhackme.com" target="_blank" rel="noopener" class="resource-card">
+          <h4>TryHackMe</h4><p>Guided learning paths for all skill levels. Best starting point for beginners.</p>
+        </a>
+        <a href="https://hackthebox.com" target="_blank" rel="noopener" class="resource-card">
+          <h4>Hack The Box</h4><p>CTF-style machines and challenges. Where the serious players go.</p>
+        </a>
+        <a href="https://portswigger.net/web-security" target="_blank" rel="noopener" class="resource-card">
+          <h4>PortSwigger Web Academy</h4><p>The definitive free course for web app hacking. OWASP concepts taught hands-on.</p>
+        </a>
+        <a href="https://ctftime.org" target="_blank" rel="noopener" class="resource-card">
+          <h4>CTFtime</h4><p>Find upcoming Capture The Flag competitions worldwide.</p>
+        </a>
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener" class="resource-card">
+          <h4>OWASP Top 10</h4><p>The definitive list of web application security risks. Required reading.</p>
+        </a>
+        <a href="https://overthewire.org/wargames/" target="_blank" rel="noopener" class="resource-card">
+          <h4>OverTheWire</h4><p>Wargames for learning Linux, scripting, and hacking fundamentals.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REAL WORKING TOOLS
+       ============================================================ -->
+  <section class="section" id="tools">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128736; Live Security Tools</h2>
+      <p class="section-sub fade-in">These run entirely in your browser. No data is sent to any server.</p>
+
+      <div class="tools-grid">
+
+        <!-- 1. HASH GENERATOR -->
+        <div class="tool-card fade-in" id="tool-hash">
+          <h3 class="tool-title">&#128272; Hash Generator</h3>
+          <p class="tool-desc">Generate SHA-256, SHA-384, or SHA-512 hashes of any text.</p>
+          <div class="tool-body">
+            <textarea class="tool-input" id="hashInput" placeholder="Enter text to hash..." rows="3"></textarea>
+            <div class="tool-row">
+              <select id="hashAlgo" class="tool-select">
+                <option value="SHA-256">SHA-256</option>
+                <option value="SHA-384">SHA-384</option>
+                <option value="SHA-512">SHA-512</option>
+              </select>
+              <button class="btn btn-primary" onclick="runHash()">Hash It</button>
+            </div>
+            <div class="tool-output" id="hashOutput"></div>
+          </div>
+        </div>
+
+        <!-- 2. BASE64 -->
+        <div class="tool-card fade-in" id="tool-b64">
+          <h3 class="tool-title">&#128260; Base64 Encoder / Decoder</h3>
+          <p class="tool-desc">Encode or decode Base64 strings instantly.</p>
+          <div class="tool-body">
+            <textarea class="tool-input" id="b64Input" placeholder="Enter text or Base64..." rows="3"></textarea>
+            <div class="tool-row">
+              <button class="btn btn-primary" onclick="runB64('encode')">Encode</button>
+              <button class="btn btn-ghost"   onclick="runB64('decode')">Decode</button>
+            </div>
+            <div class="tool-output" id="b64Output"></div>
+          </div>
+        </div>
+
+        <!-- 3. PASSWORD STRENGTH -->
+        <div class="tool-card fade-in" id="tool-pass">
+          <h3 class="tool-title">&#128274; Password Strength Analyzer</h3>
+          <p class="tool-desc">Check how strong a password is and why.</p>
+          <div class="tool-body">
+            <input type="text" class="tool-input" id="passInput" placeholder="Enter a password..." autocomplete="off" oninput="runPassCheck()" />
+            <div class="pass-meter">
+              <div class="pass-bar" id="passBar"></div>
+            </div>
+            <div class="tool-output" id="passOutput"></div>
+          </div>
+        </div>
+
+        <!-- 4. JWT DECODER -->
+        <div class="tool-card fade-in" id="tool-jwt">
+          <h3 class="tool-title">&#128196; JWT Decoder</h3>
+          <p class="tool-desc">Decode and inspect JSON Web Tokens. Reveals header, payload, and signature info. Does NOT verify the signature.</p>
+          <div class="tool-body">
+            <textarea class="tool-input" id="jwtInput" placeholder="Paste a JWT token: eyJ..." rows="3"></textarea>
+            <button class="btn btn-primary" onclick="runJWT()">Decode</button>
+            <div class="tool-output" id="jwtOutput"></div>
+          </div>
+        </div>
+
+        <!-- 5. IP LOOKUP -->
+        <div class="tool-card fade-in" id="tool-ip">
+          <h3 class="tool-title">&#127760; IP Address Lookup</h3>
+          <p class="tool-desc">Get geolocation, ISP, and ASN info for any IP address. Leave blank to look up your own IP.</p>
+          <div class="tool-body">
+            <input type="text" class="tool-input" id="ipInput" placeholder="e.g. 8.8.8.8 (blank = your IP)" />
+            <button class="btn btn-primary" onclick="runIPLookup()">Lookup</button>
+            <div class="tool-output" id="ipOutput"></div>
+          </div>
+        </div>
+
+        <!-- 6. DNS LOOKUP -->
+        <div class="tool-card fade-in" id="tool-dns">
+          <h3 class="tool-title">&#128205; DNS Resolver</h3>
+          <p class="tool-desc">Query DNS records for any domain via Google's public DNS-over-HTTPS API.</p>
+          <div class="tool-body">
+            <input type="text" class="tool-input" id="dnsInput" placeholder="e.g. google.com" />
+            <div class="tool-row">
+              <select id="dnsType" class="tool-select">
+                <option>A</option>
+                <option>AAAA</option>
+                <option>MX</option>
+                <option>TXT</option>
+                <option>NS</option>
+                <option>CNAME</option>
+              </select>
+              <button class="btn btn-primary" onclick="runDNS()">Resolve</button>
+            </div>
+            <div class="tool-output" id="dnsOutput"></div>
+          </div>
+        </div>
+
+        <!-- 7. URL ENCODER -->
+        <div class="tool-card fade-in" id="tool-url">
+          <h3 class="tool-title">&#128279; URL Encoder / Decoder</h3>
+          <p class="tool-desc">Encode or decode URL-encoded strings. Essential for web app testing.</p>
+          <div class="tool-body">
+            <textarea class="tool-input" id="urlInput" placeholder="Enter text or URL-encoded string..." rows="3"></textarea>
+            <div class="tool-row">
+              <button class="btn btn-primary" onclick="runURL('encode')">Encode</button>
+              <button class="btn btn-ghost"   onclick="runURL('decode')">Decode</button>
+            </div>
+            <div class="tool-output" id="urlOutput"></div>
+          </div>
+        </div>
+
+        <!-- 8. CAESAR / ROT13 -->
+        <div class="tool-card fade-in" id="tool-cipher">
+          <h3 class="tool-title">&#128207; Caesar / ROT13 Cipher</h3>
+          <p class="tool-desc">Classic substitution cipher. ROT13 is shift=13 (self-inverse). Useful for basic CTF recon.</p>
+          <div class="tool-body">
+            <textarea class="tool-input" id="cipherInput" placeholder="Enter text to shift..." rows="2"></textarea>
+            <div class="tool-row">
+              <label style="color:var(--text-dim);font-size:.82rem">Shift:</label>
+              <input type="number" id="cipherShift" value="13" min="1" max="25" class="tool-input" style="width:70px;padding:.4rem" />
+              <button class="btn btn-primary" onclick="runCipher('encode')">Encode</button>
+              <button class="btn btn-ghost"   onclick="runCipher('decode')">Decode</button>
+            </div>
+            <div class="tool-output" id="cipherOutput"></div>
+          </div>
+        </div>
+
+        <!-- 9. REGEX TESTER -->
+        <div class="tool-card fade-in" id="tool-regex" style="grid-column: span 2">
+          <h3 class="tool-title">&#128269; Regex Tester</h3>
+          <p class="tool-desc">Test regular expressions against text in real time. Matches are highlighted. Flags: g, i, m supported.</p>
+          <div class="tool-body">
+            <div class="tool-row">
+              <span style="color:var(--green);font-size:1.1rem">/</span>
+              <input type="text" id="regexPattern" class="tool-input" placeholder="pattern" style="flex:1" oninput="runRegex()" />
+              <span style="color:var(--green);font-size:1.1rem">/</span>
+              <input type="text" id="regexFlags" class="tool-input" value="gi" style="width:60px" oninput="runRegex()" />
+            </div>
+            <textarea class="tool-input" id="regexText" placeholder="Enter text to test against..." rows="4" oninput="runRegex()" style="margin-top:.5rem"></textarea>
+            <div class="tool-output" id="regexOutput"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-motto">&#9876; Forged in foam, tempered in code, sustained by pugs &#128021;</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a>
+        <a href="https://owasp.org" target="_blank" rel="noopener">OWASP</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 HEXWARDEN</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  /* ============================================================
+     LIVE SECURITY TOOLS
+     ============================================================ */
+
+  function showOutput(id, html, isError) {
+    const el = document.getElementById(id);
+    el.innerHTML = html;
+    el.style.borderColor = isError ? 'var(--red)' : 'var(--green-dim)';
+  }
+
+  function copyBtn(text) {
+    return `<button onclick="navigator.clipboard.writeText('${text.replace(/'/g,"\\'")}').then(()=>this.textContent='Copied!').catch(()=>{})" class="copy-btn">Copy</button>`;
+  }
+
+  /* --- 1. HASH --- */
+  async function runHash() {
+    const text = document.getElementById('hashInput').value;
+    const algo = document.getElementById('hashAlgo').value;
+    if (!text) { showOutput('hashOutput', 'Enter some text first.', true); return; }
+    try {
+      const buf  = await crypto.subtle.digest(algo, new TextEncoder().encode(text));
+      const hex  = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+      showOutput('hashOutput', `<strong>${algo}:</strong><br><span class="mono-out">${hex}</span>${copyBtn(hex)}`, false);
+    } catch(e) { showOutput('hashOutput', 'Error: ' + e.message, true); }
+  }
+
+  /* --- 2. BASE64 --- */
+  function runB64(dir) {
+    const text = document.getElementById('b64Input').value;
+    if (!text) { showOutput('b64Output', 'Enter some text first.', true); return; }
+    try {
+      const result = dir === 'encode' ? btoa(unescape(encodeURIComponent(text))) : decodeURIComponent(escape(atob(text)));
+      showOutput('b64Output', `<strong>${dir === 'encode' ? 'Encoded' : 'Decoded'}:</strong><br><span class="mono-out">${escHtml(result)}</span>${copyBtn(result)}`, false);
+    } catch(e) { showOutput('b64Output', 'Error: ' + e.message + ' (Is this valid Base64?)', true); }
+  }
+
+  /* --- 3. PASSWORD STRENGTH --- */
+  function runPassCheck() {
+    const pass = document.getElementById('passInput').value;
+    const bar  = document.getElementById('passBar');
+    if (!pass) { document.getElementById('passOutput').innerHTML = ''; bar.style.width='0'; return; }
+
+    let score = 0;
+    const checks = [];
+
+    if (pass.length >= 8)  { score++; checks.push({ok:true,  msg:'Length 8+'});      } else { checks.push({ok:false, msg:'Too short (< 8 chars)'}); }
+    if (pass.length >= 12) { score++; checks.push({ok:true,  msg:'Length 12+ bonus'}); }
+    if (/[A-Z]/.test(pass)) { score++; checks.push({ok:true,  msg:'Has uppercase'});  } else { checks.push({ok:false, msg:'No uppercase letters'}); }
+    if (/[a-z]/.test(pass)) { score++; checks.push({ok:true,  msg:'Has lowercase'});  } else { checks.push({ok:false, msg:'No lowercase letters'}); }
+    if (/\d/.test(pass))    { score++; checks.push({ok:true,  msg:'Has numbers'});    } else { checks.push({ok:false, msg:'No numbers'}); }
+    if (/[^A-Za-z0-9]/.test(pass)) { score+=2; checks.push({ok:true, msg:'Has special chars +2'}); } else { checks.push({ok:false, msg:'No special characters'}); }
+    if (pass.length >= 20) { score++; checks.push({ok:true, msg:'Length 20+ bonus'}); }
+
+    const maxScore = 8;
+    const pct   = Math.min((score / maxScore) * 100, 100);
+    const color = score <= 2 ? '#ff4444' : score <= 4 ? '#ff8800' : score <= 6 ? '#ffcc00' : '#00ff88';
+    const label = score <= 2 ? 'VERY WEAK' : score <= 4 ? 'WEAK' : score <= 6 ? 'MODERATE' : 'STRONG';
+
+    bar.style.width     = pct + '%';
+    bar.style.background = color;
+
+    const html = `<strong style="color:${color}">${label}</strong> (${score}/${maxScore})<br>` +
+      checks.map(c => `<span style="color:${c.ok?'var(--green)':'var(--red)'}">${c.ok?'✓':'✗'} ${escHtml(c.msg)}</span>`).join('<br>');
+    showOutput('passOutput', html, false);
+  }
+
+  /* --- 4. JWT --- */
+  function runJWT() {
+    const token = document.getElementById('jwtInput').value.trim();
+    if (!token) { showOutput('jwtOutput', 'Paste a JWT token first.', true); return; }
+    try {
+      const parts = token.split('.');
+      if (parts.length !== 3) throw new Error('Not a valid JWT (expected 3 parts separated by .)');
+      const decode = p => JSON.parse(decodeURIComponent(escape(atob(p.replace(/-/g,'+').replace(/_/g,'/').padEnd(Math.ceil(p.length/4)*4,'=')))));
+      const header  = decode(parts[0]);
+      const payload = decode(parts[1]);
+      const html = `
+        <strong>Header:</strong><pre class="mono-out">${JSON.stringify(header, null, 2)}</pre>
+        <strong>Payload:</strong><pre class="mono-out">${JSON.stringify(payload, null, 2)}</pre>
+        <strong>Signature:</strong> <span class="mono-out" style="font-size:.75rem">${parts[2]}</span>
+        <br><em style="color:var(--text-dim);font-size:.78rem">&#9888; Signature NOT verified — decode only</em>`;
+      showOutput('jwtOutput', html, false);
+    } catch(e) { showOutput('jwtOutput', 'Error: ' + e.message, true); }
+  }
+
+  /* --- 5. IP LOOKUP --- */
+  async function runIPLookup() {
+    const ip  = document.getElementById('ipInput').value.trim();
+    const url = ip ? `https://ipapi.co/${ip}/json/` : 'https://ipapi.co/json/';
+    showOutput('ipOutput', '<span style="color:var(--text-dim)">Looking up...</span>', false);
+    try {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      if (d.error) throw new Error(d.reason || 'Invalid IP');
+      const html = `
+        <table class="data-table">
+          <tr><td>IP</td><td>${escHtml(d.ip||'—')}</td></tr>
+          <tr><td>City</td><td>${escHtml(d.city||'—')}</td></tr>
+          <tr><td>Region</td><td>${escHtml(d.region||'—')}</td></tr>
+          <tr><td>Country</td><td>${escHtml(d.country_name||'—')} ${d.country?'('+d.country+')':''}</td></tr>
+          <tr><td>ISP / Org</td><td>${escHtml(d.org||'—')}</td></tr>
+          <tr><td>ASN</td><td>${escHtml(d.asn||'—')}</td></tr>
+          <tr><td>Timezone</td><td>${escHtml(d.timezone||'—')}</td></tr>
+          <tr><td>Lat/Lon</td><td>${d.latitude||'?'}, ${d.longitude||'?'}</td></tr>
+        </table>`;
+      showOutput('ipOutput', html, false);
+    } catch(e) { showOutput('ipOutput', 'Error: ' + e.message, true); }
+  }
+
+  /* --- 6. DNS --- */
+  async function runDNS() {
+    const domain = document.getElementById('dnsInput').value.trim();
+    const type   = document.getElementById('dnsType').value;
+    if (!domain) { showOutput('dnsOutput', 'Enter a domain first.', true); return; }
+    showOutput('dnsOutput', '<span style="color:var(--text-dim)">Resolving...</span>', false);
+    try {
+      const r = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=${type}`);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      if (d.Status !== 0) throw new Error(`DNS error code ${d.Status} — domain may not exist`);
+      if (!d.Answer || !d.Answer.length) { showOutput('dnsOutput', `No ${type} records found for ${escHtml(domain)}`, false); return; }
+      const rows = d.Answer.map(a =>
+        `<tr><td>${escHtml(a.name)}</td><td>${a.type}</td><td>${a.TTL}s</td><td>${escHtml(a.data)}</td></tr>`
+      ).join('');
+      showOutput('dnsOutput', `<table class="data-table"><tr><th>Name</th><th>Type</th><th>TTL</th><th>Value</th></tr>${rows}</table>`, false);
+    } catch(e) { showOutput('dnsOutput', 'Error: ' + e.message, true); }
+  }
+
+  /* --- 7. URL ENCODE --- */
+  function runURL(dir) {
+    const text = document.getElementById('urlInput').value;
+    if (!text) { showOutput('urlOutput', 'Enter some text first.', true); return; }
+    try {
+      const result = dir === 'encode' ? encodeURIComponent(text) : decodeURIComponent(text);
+      showOutput('urlOutput', `<strong>${dir === 'encode' ? 'Encoded' : 'Decoded'}:</strong><br><span class="mono-out">${escHtml(result)}</span>${copyBtn(result)}`, false);
+    } catch(e) { showOutput('urlOutput', 'Error: ' + e.message, true); }
+  }
+
+  /* --- 8. CAESAR / ROT13 --- */
+  function runCipher(dir) {
+    const text  = document.getElementById('cipherInput').value;
+    let   shift = parseInt(document.getElementById('cipherShift').value, 10) || 13;
+    if (dir === 'decode') shift = 26 - (shift % 26);
+    if (!text) { showOutput('cipherOutput', 'Enter text first.', true); return; }
+    const result = text.replace(/[a-zA-Z]/g, c => {
+      const base = c >= 'a' ? 97 : 65;
+      return String.fromCharCode((c.charCodeAt(0) - base + shift) % 26 + base);
+    });
+    showOutput('cipherOutput', `<strong>Result (shift ${dir==='encode'?shift:26-shift}):</strong><br><span class="mono-out">${escHtml(result)}</span>${copyBtn(result)}`, false);
+  }
+
+  /* --- 9. REGEX --- */
+  function runRegex() {
+    const pattern = document.getElementById('regexPattern').value;
+    const flags   = document.getElementById('regexFlags').value;
+    const text    = document.getElementById('regexText').value;
+    if (!pattern || !text) { document.getElementById('regexOutput').innerHTML = ''; return; }
+    try {
+      const rx      = new RegExp(pattern, flags.replace(/[^gimsuy]/g,''));
+      const matches = [...text.matchAll(new RegExp(pattern, flags.includes('g') ? flags : flags+'g'))];
+      if (!matches.length) { showOutput('regexOutput', '<em style="color:var(--text-dim)">No matches found.</em>', false); return; }
+      const highlighted = text.replace(rx, m => `<mark class="regex-match">${escHtml(m)}</mark>`);
+      showOutput('regexOutput', `<strong style="color:var(--green)">${matches.length} match${matches.length>1?'es':''}</strong><br><div class="mono-out">${highlighted}</div>`, false);
+    } catch(e) { showOutput('regexOutput', 'Invalid regex: ' + e.message, true); }
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pugs — HEXWARDEN</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body class="subpage">
+
+  <nav id="navbar">
+    <div class="nav-logo"><a href="index.html">&#9876; HEXWARDEN</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="belegarth.html">Belegarth</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="hacking.html">Hacking</a></li>
+      <li><a href="pugs.html" class="active">Pugs</a></li>
+    </ul>
+    <button class="nav-toggle">&#9876;</button>
+  </nav>
+
+  <header class="page-hero pug-hero">
+    <div class="ph-content">
+      <div class="ph-badge">&#128021; THE MOST IMPORTANT SECTION</div>
+      <h1 class="ph-title">Pugs</h1>
+      <p class="ph-sub">Pug lover eternally. No exceptions. No compromises.</p>
+    </div>
+  </header>
+
+  <!-- PUG FACTS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128021; The Essential Pug Facts</h2>
+      <div class="pug-facts">
+        <div class="fact-card fade-in"><div class="fact-icon">&#128021;</div><h4>Snore Machines</h4><p>Pugs are brachycephalic — their flat faces cause them to snore, snort, and wheeze constantly. This is a feature, not a bug. It's music.</p></div>
+        <div class="fact-card fade-in"><div class="fact-icon">&#129392;</div><h4>Professional Nappers</h4><p>Pugs sleep 14 hours a day on average. They have optimized their entire existence around rest. Respect the commitment.</p></div>
+        <div class="fact-card fade-in"><div class="fact-icon">&#128293;</div><h4>Ancient Royalty</h4><p>Bred by Chinese emperors and later adopted by European royalty. Pugs have always known they're royalty. They haven't forgotten.</p></div>
+        <div class="fact-card fade-in"><div class="fact-icon">&#129505;</div><h4>A Grumble</h4><p>A group of pugs is called a "grumble." This is objectively the greatest collective noun ever created by humanity.</p></div>
+        <div class="fact-card fade-in"><div class="fact-icon">&#127774;</div><h4>Dutch Royal Symbol</h4><p>The House of Orange adopted the pug as their official mascot in the 1500s after a pug reportedly saved William the Silent from an assassination attempt.</p></div>
+        <div class="fact-card fade-in"><div class="fact-icon">&#128247;</div><h4>Napoleon's Issue</h4><p>Josephine Bonaparte's pug Fortune bit Napoleon on their wedding night. Napoleon allegedly endured this because Josephine refused to lock the pug out.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANATOMY -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128203; Pug Anatomy 101</h2>
+      <div class="anatomy-grid fade-in">
+        <div class="anatomy-item"><span class="a-part">The Face Wrinkles</span><p>Must be cleaned daily to prevent yeast/bacterial buildup. Use a soft damp cloth and dry thoroughly. The wrinkles are adorable and also a maintenance responsibility.</p></div>
+        <div class="anatomy-item"><span class="a-part">The Eyes</span><p>Large and prominent — prone to scratches and irritation. Watch for discharge, redness, or cloudiness. Pugs can get eye prolapse in extreme cases. Keep them clean.</p></div>
+        <div class="anatomy-item"><span class="a-part">The Snout</span><p>Flat (brachycephalic) means restricted airways. This is why pugs snore, overheat easily, and should not be over-exercised in heat. Keep them cool.</p></div>
+        <div class="anatomy-item"><span class="a-part">The Corkscrew Tail</span><p>Adorable but the base area can trap moisture and debris. Clean it regularly. Some pugs have tighter curls than others — monitor for skin irritation.</p></div>
+        <div class="anatomy-item"><span class="a-part">The Double Coat</span><p>Pugs shed an absurd amount for their size. Weekly brushing with a bristle brush dramatically reduces shedding. They shed year-round with extra intensity in spring/fall.</p></div>
+        <div class="anatomy-item"><span class="a-part">The Body</span><p>Pugs gain weight easily. Obesity severely worsens their breathing problems. Measured meals, no free-feeding, regular moderate walks. Keep them in healthy weight range.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOOD METER -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128293; Pug Mood Meter</h2>
+      <div class="pug-meter fade-in">
+        <div class="mood-track">
+          <span>&#128532; Grumpy</span>
+          <div class="mood-bar">
+            <div class="mood-fill" id="moodFill"></div>
+            <div class="mood-thumb" id="moodThumb">&#128021;</div>
+          </div>
+          <span>Ecstatic &#129392;</span>
+        </div>
+        <p class="mood-label" id="moodLabel">Calculating pug happiness...</p>
+        <button class="btn btn-ghost" onclick="forceMoodUpdate()" style="margin-top:1rem">&#128260; Refresh Mood</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARE GUIDE -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title fade-in">&#10084; Pug Care Guide</h2>
+      <div class="care-grid fade-in">
+        <div class="care-card">
+          <h4>&#127860; Diet</h4>
+          <ul class="care-list">
+            <li>2 measured meals per day — no free feeding</li>
+            <li>Avoid: grapes, raisins, onions, chocolate, xylitol</li>
+            <li>Monitor weight closely — 14–18 lbs is healthy range</li>
+            <li>Adjust food with age and activity level</li>
+          </ul>
+        </div>
+        <div class="care-card">
+          <h4>&#127939; Exercise</h4>
+          <ul class="care-list">
+            <li>Short walks — 20–30 min daily is plenty</li>
+            <li>NEVER walk in heat above 80°F / 27°C</li>
+            <li>Watch for heavy breathing, slowing, or sitting down</li>
+            <li>Swimming is excellent low-impact exercise</li>
+          </ul>
+        </div>
+        <div class="care-card">
+          <h4>&#128114; Health Monitoring</h4>
+          <ul class="care-list">
+            <li>Annual vet checkups minimum</li>
+            <li>Clean wrinkles and tail area weekly</li>
+            <li>Check eyes daily for discharge or redness</li>
+            <li>Watch for BOAS symptoms: excessive snoring, gagging</li>
+          </ul>
+        </div>
+        <div class="care-card">
+          <h4>&#129505; Mental Health</h4>
+          <ul class="care-list">
+            <li>Pugs are extremely social — don't leave alone all day</li>
+            <li>They thrive with other pugs or dogs</li>
+            <li>Puzzle toys help keep their minds active</li>
+            <li>Belly rubs are a non-negotiable daily requirement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section" id="quiz-section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#10067; What Kind of Pug Energy Are You?</h2>
+      <p class="section-sub fade-in">A completely scientific assessment.</p>
+      <div class="quiz-wrap fade-in" id="quizWrap">
+        <div class="quiz-question" id="quizQuestion"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-result" id="quizResult" style="display:none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASCII / VISUAL -->
+  <section class="section section-dark">
+    <div class="container" style="text-align:center">
+      <h2 class="section-title fade-in">&#128021; The Sacred Texts</h2>
+      <pre class="ascii-pug fade-in">
+  ／￣￣ヽ＿
+ ｜ ･  ･ |
+  ＼ ＿▽＿ /
+   ／ ＼ ／
+  ｜  pug ｜
+      </pre>
+      <pre class="ascii-pug fade-in">
+   .    .
+  ( o  o )
+   (  uu  )
+   /|    |\
+  / |    | \
+      snort.
+      </pre>
+    </div>
+  </section>
+
+  <!-- ADOPTION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">&#128021; Adopt, Don't Shop</h2>
+      <p class="section-sub fade-in">There are always pugs in rescues who need homes. Please consider adoption before buying from breeders.</p>
+      <div class="adopt-grid fade-in">
+        <a href="https://www.pugrescue.com" target="_blank" rel="noopener" class="adopt-card"><h4>Pug Rescue Network</h4><p>National network of pug rescue organizations across the US.</p></a>
+        <a href="https://pugsinc.com" target="_blank" rel="noopener" class="adopt-card"><h4>Pugs Inc.</h4><p>Dedicated pug rescue and rehoming organization.</p></a>
+        <a href="https://www.petfinder.com/dog-breeds/pug" target="_blank" rel="noopener" class="adopt-card"><h4>Petfinder — Pugs</h4><p>Search pug adoptions by location across the country.</p></a>
+        <a href="https://www.aspca.org/adopt-pet" target="_blank" rel="noopener" class="adopt-card"><h4>ASPCA</h4><p>Nationwide adoption listings. Many pugs need homes.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-motto">&#9876; Forged in foam, tempered in code, sustained by pugs &#128021;</p>
+      <p class="footer-copy">&copy; 2026 HEXWARDEN &middot; Pug lover eternally.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  /* PUG QUIZ */
+  const questions = [
+    {
+      q: "It's Saturday morning. What are you doing?",
+      opts: [
+        { text: "Still asleep. Alarm is for weekdays.", val: "napper" },
+        { text: "Eating breakfast immediately upon waking.", val: "foodie" },
+        { text: "Zoomies around the house for no reason.", val: "zoomer" },
+        { text: "Sitting in a sunbeam looking majestic.", val: "royal" }
+      ]
+    },
+    {
+      q: "Someone walks through the front door. You:",
+      opts: [
+        { text: "Lose your entire mind with excitement.", val: "zoomer" },
+        { text: "Barely look up from your nap.", val: "napper" },
+        { text: "Demand immediate attention and pets.", val: "royal" },
+        { text: "Check if they brought snacks.", val: "foodie" }
+      ]
+    },
+    {
+      q: "Your ideal evening involves:",
+      opts: [
+        { text: "A warm couch, a blanket, and unconsciousness.", val: "napper" },
+        { text: "A full bowl, a second bowl, watching for a third.", val: "foodie" },
+        { text: "Running in circles for exactly 4 minutes then stopping.", val: "zoomer" },
+        { text: "Being adored from across the room.", val: "royal" }
+      ]
+    },
+    {
+      q: "Your spirit sound is:",
+      opts: [
+        { text: "A loud, rattling snore.", val: "napper" },
+        { text: "Wet chewing noises.", val: "foodie" },
+        { text: "Small galloping footsteps at 2am.", val: "zoomer" },
+        { text: "A single dignified snort.", val: "royal" }
+      ]
+    }
+  ];
+
+  const results = {
+    napper: { title: "&#129397; The Napper", desc: "You are pure pug. Sleep is your craft. You have perfected the art of occupying 80% of any available surface while somehow taking up 100% of the warmth. You are not lazy — you are conserving energy for optimal snoring later." },
+    foodie: { title: "&#127860; The Foodie", desc: "You orbit every meal like it's a religious event. Your internal clock is calibrated exclusively to feeding times. You would absolutely eat a sock if it smelled like something interesting. Absolutely no shame in this." },
+    zoomer: { title: "&#128293; The Zoomer", desc: "You have exactly two modes: off and MAXIMUM CHAOS. There is no transition. You go from zero to full zoomies without warning and stop just as suddenly. Nobody knows what triggers it. You don't know either. That's fine." },
+    royal: { title: "&#128081; The Royal", desc: "You know your worth. You were bred by emperors and you haven't forgotten it. You don't need to chase the toy — the toy should come to you. You accept pets as tribute and grant belly rub access selectively." }
+  };
+
+  let currentQ = 0;
+  const scores = { napper: 0, foodie: 0, zoomer: 0, royal: 0 };
+
+  function renderQuestion() {
+    const q = questions[currentQ];
+    document.getElementById('quizQuestion').innerHTML = `<p class="quiz-q-text"><span class="quiz-num">${currentQ+1}/${questions.length}</span> ${q.q}</p>`;
+    document.getElementById('quizOptions').innerHTML = q.opts.map(o =>
+      `<button class="quiz-opt" onclick="answerQ('${o.val}')">${o.text}</button>`
+    ).join('');
+  }
+
+  function answerQ(val) {
+    scores[val]++;
+    currentQ++;
+    if (currentQ < questions.length) {
+      renderQuestion();
+    } else {
+      const winner = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];
+      const r = results[winner];
+      document.getElementById('quizOptions').innerHTML = '';
+      document.getElementById('quizQuestion').innerHTML = '';
+      const result = document.getElementById('quizResult');
+      result.style.display = 'block';
+      result.innerHTML = `<h3>${r.title}</h3><p>${r.desc}</p><button class="btn btn-ghost" onclick="restartQuiz()">Retake</button>`;
+    }
+  }
+
+  function restartQuiz() {
+    currentQ = 0;
+    Object.keys(scores).forEach(k => scores[k] = 0);
+    document.getElementById('quizResult').style.display = 'none';
+    renderQuestion();
+  }
+
+  renderQuestion();
+  </script>
+</body>
+</html>
